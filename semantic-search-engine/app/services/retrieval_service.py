@@ -18,6 +18,8 @@ class RetrievalService():
             return []
         
         # Compute cosine similarity between the query and all embeddings
+        # We are using index 0 in the below line because, we have passed only 1 query_embedding.
+        # In case we pass N query_embeddings, we have to use [0..N] indices.
         similarities = util.cos_sim(query_embedding, embeddings)[0]
 
         # Convert similarities tensor to numpy and pair with documents
