@@ -98,3 +98,12 @@ python main.py
 2.  **Query Loop**: You will be prompted with `Enter your query:`.
 3.  **Retrieval & Generation**: The system retrieves the top 3 most similar document chunks, formats them as context, queries `gemini-2.5-flash`, and prints the response.
 4.  **Exit**: Type `exit` to quit the query loop.
+
+
+## Current Limitations
+
+- Optimized for structured policy documents.
+- Uses a custom hierarchy parser based on numbered headings.
+- Does not yet support scanned PDFs or OCR.
+- Does not perform reranking or metadata filtering.
+- Uses semantic retrieval only (no hybrid keyword search).
